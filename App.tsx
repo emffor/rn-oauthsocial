@@ -3,11 +3,15 @@ import React from 'react';
 
 import { Home } from './src/screens/Home';
 import { Dashboard } from './src/screens/Dashboard';
+import { Resume } from './src/screens/Resume';
+import { SignIn } from './src/screens/SignIn';
+import { Routes } from '././src/routes';
+
+import { AuthContext } from './src/utils/AuthContext';
 
 import { ThemeProvider } from 'styled-components';
 import theme from './src/styles/theme';
 
-import { Routes } from '././src/routes';
 
 import {
   useFonts,
@@ -32,8 +36,7 @@ import {
   Poppins_600SemiBold,
   Poppins_700Bold,
 } from '@expo-google-fonts/poppins';
-import { Resume } from './src/screens/Resume';
-import { SignIn } from './src/screens/SignIn';
+
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -57,7 +60,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SignIn />
+
+      <AuthContext.Provider value={[]}>
+          <SignIn />
+      </AuthContext.Provider>
+
     </ThemeProvider>
   );
 }
