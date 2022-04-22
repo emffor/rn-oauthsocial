@@ -7,7 +7,7 @@ export const Container = styled.TouchableOpacity.attrs({
     height: ${RFValue(60)}px;
 
     background-color: ${({theme}) => theme.colors.shape};
-    border-radius: 5px;
+    border-radius: 10px;
 
     align-items: center;
     flex-direction: row;
