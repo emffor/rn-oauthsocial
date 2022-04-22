@@ -1,7 +1,7 @@
 export default {
     colors: {
-        primary: '#132742',
-        secondary: '#FFCBCB',
+        primary: '#417be2',
+        secondary: '#232836',
 
         background_primary: '#F4F5F6',
         background_secondary: '#FFFFFF',
@@ -9,7 +9,7 @@ export default {
         text: '#7A7A80',
         text_detail: '#AEAEB3',
         title: '#47474D',
-
+ 
         line: '#EBEBF0',
 
         attention: '#DC1637',

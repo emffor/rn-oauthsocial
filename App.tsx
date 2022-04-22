@@ -33,6 +33,7 @@ import {
   Poppins_700Bold,
 } from '@expo-google-fonts/poppins';
 import { Resume } from './src/screens/Resume';
+import { SignIn } from './src/screens/SignIn';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -56,7 +57,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Routes />
+      <SignIn />
     </ThemeProvider>
   );
 }
