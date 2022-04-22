@@ -7,12 +7,12 @@ import {
   Content,
 } from './styles';
 
-export function Home(){
+export function Dashboard(){
   return (
     <Container>
       <Content>
 
-        <Title>Home</Title>
+        <Title>Dashboard</Title>
 
         <Button 
           title='Next Page'

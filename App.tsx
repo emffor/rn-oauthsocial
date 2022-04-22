@@ -1,6 +1,8 @@
+import 'react-native-safe-area-context';
 import React from 'react';
 
 import { Home } from './src/screens/Home';
+import { Dashboard } from './src/screens/Dashboard';
 
 import { ThemeProvider } from 'styled-components';
 import theme from './src/styles/theme';
@@ -28,6 +30,7 @@ import {
   Poppins_600SemiBold,
   Poppins_700Bold,
 } from '@expo-google-fonts/poppins';
+import { Resume } from './src/screens/Resume';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -51,7 +54,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <Resume />
     </ThemeProvider>
   );
 }
