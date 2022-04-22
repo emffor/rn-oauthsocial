@@ -1,4 +1,4 @@
-import 'react-native-safe-area-context';
+import 'react-native-gesture-handler';
 import React from 'react';
 
 import { Home } from './src/screens/Home';
@@ -6,6 +6,8 @@ import { Dashboard } from './src/screens/Dashboard';
 
 import { ThemeProvider } from 'styled-components';
 import theme from './src/styles/theme';
+
+import { Routes } from '././src/routes';
 
 import {
   useFonts,
@@ -54,7 +56,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Resume />
+      <Routes />
     </ThemeProvider>
   );
 }

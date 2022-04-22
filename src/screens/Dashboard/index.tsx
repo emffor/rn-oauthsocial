@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from '../../components/Form/Button';
 
+import { ParamListBase, NavigationProp, useNavigation } from '@react-navigation/native';
+
 import {
   Container,
   Title,
@@ -8,6 +10,16 @@ import {
 } from './styles';
 
 export function Dashboard(){
+  const navigation = useNavigation<NavigationProp<ParamListBase>>();
+
+  const handleNextPage = () => {
+    navigation.navigate('Resume');
+  }
+
+  const handleBack = () => {
+    navigation.navigate('Home');
+  }
+
   return (
     <Container>
       <Content>
@@ -16,12 +28,12 @@ export function Dashboard(){
 
         <Button 
           title='Next Page'
-          onPress={() => {}}
+          onPress={handleNextPage}
         />
 
         <Button 
           title='Back Page'
-          onPress={() => {}}
+          onPress={handleBack}
         />
 
       </Content>
