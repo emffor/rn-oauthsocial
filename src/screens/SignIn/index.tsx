@@ -6,7 +6,7 @@ import AppleSvg from '../../assets/apple.svg';
 
 import { SigInSocialButton } from '../../components/Form/SigInSocialButton';
 
-import { AuthContext } from '../../utils/AuthContext';
+import { useAuth } from '../../hooks/auth';
 
 import {
   Container,
@@ -20,8 +20,9 @@ import {
 
 
 export function SignIn(){
-  const data = useContext(AuthContext);
-  console.log(data);
+  const { user } = useAuth();
+  console.log(user);
+  // console.log(user.name);
   
 
   return (

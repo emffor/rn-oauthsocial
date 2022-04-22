@@ -1,13 +1,10 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 
-import { Home } from './src/screens/Home';
-import { Dashboard } from './src/screens/Dashboard';
-import { Resume } from './src/screens/Resume';
 import { SignIn } from './src/screens/SignIn';
 import { Routes } from '././src/routes';
 
-import { AuthContext } from './src/utils/AuthContext';
+import { AuthProvider } from './src/hooks/auth';
 
 import { ThemeProvider } from 'styled-components';
 import theme from './src/styles/theme';
@@ -61,9 +58,9 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
 
-      <AuthContext.Provider value={[]}>
+      <AuthProvider>
           <SignIn />
-      </AuthContext.Provider>
+      </AuthProvider>
 
     </ThemeProvider>
   );
